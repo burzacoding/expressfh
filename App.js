@@ -16,7 +16,7 @@ const info = {
 
 // HANDLEBARS
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, '/views'))
+// app.set('views', path.join(__dirname, '/views'))
 hbs.registerPartials(__dirname + "/views/partials");
 
 app.listen(port, () => {
