@@ -2,20 +2,20 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const hbs = require("hbs");
-require('dotenv').config()
+require("dotenv").config();
 
 const port = process.env.PORT || 3000;
 
 const info = {
-    titulo: "Curso de Node ",
-    nombre: "César Pintos",
-}
+  titulo: "Curso de Node ",
+  nombre: "César Pintos",
+};
 // SERVIR CONTENIDO PUBLICO
 
 // app.use(express.static(path.join(__dirname, "public")));
 
 // HANDLEBARS
-app.set('view engine', 'hbs');
+app.set("view engine", "hbs");
 // app.set('views', path.join(__dirname, '/views'))
 hbs.registerPartials(__dirname + "/views/partials");
 
@@ -36,3 +36,5 @@ app.get("/generic", (req, res) => {
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "public/404.html"));
 // });
+
+module.exports = app;
