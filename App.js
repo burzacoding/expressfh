@@ -12,7 +12,7 @@ const info = {
 }
 // SERVIR CONTENIDO PUBLICO
 
-// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // HANDLEBARS
 app.set('view engine', 'hbs');
